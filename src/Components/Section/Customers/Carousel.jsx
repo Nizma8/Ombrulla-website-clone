@@ -29,20 +29,18 @@ function Carousel() {
   };
 
   return (
-    <div className="relative">
-      <div className=" flex overflow-hidden mt-2 ">
+    <div className=" flex justify-center items-center  relative ">
+      <div className="  overflow-hidden mt-2  w-[70%] flex justify-center items-center">
         {currentImages.map((image, idx) => (
           <div key={idx} className=" w-1/2">
             <img src={image} alt={`Image ${startIdx + idx + 1}`} className=" object-cover" width={"150px"}/>
           </div>
         ))}
       </div>
-      <button onClick={handlePrevious} className="absolute left-0 top-1/2 transform -translate-y-1/2 px-4 py-2 bg-gray-800 text-white rounded">
-        Previous
-      </button>
-      <button onClick={handleNext} className="absolute right-0 top-1/2 transform -translate-y-1/2 px-4 py-2 bg-gray-800 text-white rounded">
-        Next
-      </button>
+      <i onClick={handlePrevious} className=" fa-solid fa-arrow-left-long absolute left-0 top-1/2 transform -translate-y-1/2 px-4 py-2  text-black ">
+      </i>
+      <i onClick={handleNext} className=" fa-solid fa-arrow-right-long absolute right-0 top-1/2 transform -translate-y-1/2 px-4 py-2  text-black ">
+      </i>
     </div>
   );
 }

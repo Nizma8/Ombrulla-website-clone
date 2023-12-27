@@ -24,8 +24,8 @@ function Menu({ name, activeMenu }) {
           return (
             <li
               key={item.id}
-              className={`py-2 ${
-                activeSubMenu === item.id ? "text-blue-500" : "text-black"
+              className={`py-2 hover:text-blue-400 ${
+                activeSubMenu === item.id ? "text-blue-500" :"text-black"
               } ${item.id !== 1 && item.id !== 5 ? "border-t-2" : ""} `}
               onClick={() => menuActive(item.id)}
             >

@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from '../Button'
+import { Link } from 'react-router-dom'
 
 function InfoSection() {
   return (
@@ -13,7 +14,7 @@ function InfoSection() {
                 </li>
                 <li className=''>
                 <Button name= {<i class="fa-solid fa-play"></i>}/>
-                   <p className=' inline-block ml-3 hover:text-blue-500 cursor-pointer'> Watch Corporate Video</p>
+                  <Link to={'#'}> <p className=' inline-block ml-3 hover:text-blue-500 cursor-pointer'> Watch Corporate Video</p></Link>
                 </li>
             </ul>
          </div>

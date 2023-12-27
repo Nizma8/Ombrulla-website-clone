@@ -3,9 +3,9 @@ import Carousel from './Carousel'
 
 function Customers() {
   return (
-    <div class="container mx-auto p-8 my-20">
-    <h6 class="text-center decoration">BRANDS WE WORK WITH</h6>
-          <h1 className=' text-5xl  font-semibold text-center my-5 '>Trusted by Thousands of Businesses</h1>
+    <div class="w-[95%] mt-28 mb-20 mx-auto">
+    <h6 class="text-center decoration mb-12">OUR CUSTOMERS</h6>
+          <h1 className=' text-5xl  font-semibold text-center mb-12 '>They Trust Us</h1>
           <Carousel/>
   </div>
   )

@@ -19,26 +19,25 @@ function ProdcutsInfo() {
         }
     ]
   return (
-    <div className='w-[95%] flex justify-center items-center my-20'>
-         <div className=' flex  justify-around w-[95%] items-center'>
-                <div>
-                    <ul>
-                        <li className='list'>PRODUCTS</li>
-                        <li>Our HR Tools</li>
-                        <li><p>Our job grading and evaluation tool, combined with the compensation management tool, is a highly effective SaaS-based solution. It greatly assists HR consultants and managers in carrying out their roles with efficiency and precision.
-</p></li>
-                    </ul>
-                </div>
-                <div className='grid grid-cols-2 gap-3'>
-                      {
-                        cardInfo.map((item,index)=>{
-                            return(
-                                <Cards info={item} key={index}/>
-                            )
-                        })
-                      }
-                </div>
-            </div></div>
+    <div className='xl:w-[95%] mx-auto my-20 w-full  md:px-12 sm:px-10'>
+      <div className='flex flex-col md:flex-row items-center justify-center md:justify-between'>
+        <ul className='w-full md:w-[35%] md:mr-8 lg:mr-12 mb-4 md:mb-0'>
+          <li className='list my-4 md:my-6 text-center md:text-left'>PRODUCTS</li>
+          <li className='text-3xl md:text-4xl my-4 md:my-6 text-center md:text-left'>Our HR Tools</li>
+          <li>
+            <p className='text-gray-400 text-base md:text-lg lg:text-xl text-center md:text-left'>
+              Our job grading and evaluation tool, combined with the compensation management tool, is a highly effective SaaS-based solution. It greatly assists HR consultants and managers in carrying out their roles with efficiency and precision.
+            </p>
+          </li>
+        </ul>
+        <div className='grid md:grid-cols-2 gap-3 w-[65%] grid-cols-1 '>
+          {cardInfo.map((item, index) => (
+            <Cards info={item} key={index} />
+          ))}
+        </div>
+      </div>
+    </div>
+
   )
 }
 

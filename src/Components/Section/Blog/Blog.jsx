@@ -1,5 +1,6 @@
 import React from 'react'
 import BlogData from './BlogData';
+import { Link } from 'react-router-dom';
 
 function Blog() {
     const blogData = [
@@ -41,12 +42,12 @@ function Blog() {
           },
 ]
   return (
-    <div class="container mx-auto p-8 my-20">
+    <div class="w-[95%] mt-28 mb-20 mx-auto">
   <h6 class="text-center decoration">Blog Updates</h6>
-        <h1 className=' text-5xl  font-semibold text-center my-5 border-b-2 pb-5'>Read</h1>
+        <h1 className=' text-5xl  font-semibold text-center my-5 border-b-2 pb-12'>Read</h1>
 
 
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-[0.15rem] mt-5">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-[0.15rem] mt-5 w-[85%] mx-auto">
     <BlogData blogData={blogData}/>
    
   </div>
