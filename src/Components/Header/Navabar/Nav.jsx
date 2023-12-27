@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 import Menu from "./Menu";
 import { useNavigate } from "react-router-dom";
 import { list } from "postcss";
@@ -51,18 +51,32 @@ const navigate = useNavigate()
 
   const dropDown = (id,path) => {
     setShowMenu((prev) => (prev === id ? null : id));
-    
-      navigate('/');
-    
+    if (path) {
+      navigate(path);
+      
+    }
   };
   const handleDropdownClick = (event) => {
     event.stopPropagation();
   };
+  useEffect(() => {
+    const handleResize = () => {
+      const screenWidth = window.innerWidth;
+      if (screenWidth > 780 && showMobileMenu) {
+        toggleMobileMenu(); // Reset mobile menu state when screen size increases
+      }
+    };
 
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [showMobileMenu, toggleMobileMenu]);
   return (
    
     <nav className={`lg:flex ${showMobileMenu ? 'block' : 'hidden'}`}>
-      <ul className="flex flex-col lg:flex-row">
+      <ul className={`flex flex-col lg:flex-row ${showMobileMenu?"hams":""}`} >
         {items.map((lists) => (
           <li
             key={lists.id}

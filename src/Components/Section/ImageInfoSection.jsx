@@ -8,7 +8,7 @@ function ImageInfoSection({details,id,infoFirst}) {
     const selectedItems = details.find(item=>item.id === id)
     const {title,heading,infos} = selectedItems.contents
   return (
-    <div className={`w-[95%] xl:flex justify-around mt-5 items-center my-20 mx-auto lg:flex md:flex py-10  bg-blue-100 xl:bg-none rounded-lg ${id ===4?'bg-blue-700 w-[100%] p-2 ':'bg-none' }`}>
+    <div className={`w-[95%] xl:flex justify-around mt-5 items-center my-20 mx-auto lg:flex md:flex py-10  bg-blue-100 md:bg-none  rounded-lg ${id ===4?'bg-blue-700 w-[100%] p-2 ':'bg-none' }`}>
   {infoFirst ? (
     <>
      {id===4 ?<ImagesInfoSection1 details = {details} />: 

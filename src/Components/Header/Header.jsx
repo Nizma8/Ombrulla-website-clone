@@ -13,9 +13,7 @@ function Header() {
   return (
     <header className="flex justify-around items-center w-[95%] py-5 mx-auto">
     <Logo />
-    {/* Hamburger icon for mobile */}
     <Hamburger onClick={toggleMobileMenu} />
-    {/* NavMenu component for both mobile and desktop */}
     <Nav showMobileMenu={showMobileMenu} toggleMobileMenu={toggleMobileMenu} />
   </header>
   )

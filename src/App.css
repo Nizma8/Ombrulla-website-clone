@@ -21,3 +21,19 @@
 
    /* Use the data-content attribute to set the content */
 }
+
+
+.hams{
+    position: absolute;
+    flex-direction: column;
+    gap: 0;
+    top: "70px";
+    left:0;text-align: start;
+    font-size: 28px;
+    transition: 0.7s ease-in-out;
+    background-color: aliceblue;
+    padding: 10px 20px 10px 20px;
+    width: 100%;
+    margin-top: 50px;
+   
+}
