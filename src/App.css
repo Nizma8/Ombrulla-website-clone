@@ -1,0 +1,23 @@
+.list::before{
+    content: "\25A0";
+    color: blue;
+    font-size: 8px;
+    margin-right: 3px;
+}
+
+.list-circle::before {
+    content: '\2022'; /* Unicode character for black bullet */
+    color: black; /* Set the color of the bullet */
+    font-size: 20px;
+    display: inline-block;
+     /* Adjust the margin as needed */
+  }
+  .decoration::before,
+.decoration::after {
+  content: "\25A0";
+  color: blue;
+  font-size: 8px;
+  margin: 0 3px 0 3px;
+
+   /* Use the data-content attribute to set the content */
+}

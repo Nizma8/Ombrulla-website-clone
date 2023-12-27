@@ -3,7 +3,7 @@ import Button from '../Button'
 
 function TitleSection() {
   return (
-    <main className='w-[95%] flex justify-around mt-5 items-center'>
+    <main className='w-[95%] flex justify-around mt-5 items-center mx-auto'>
         <div className=' w-1/2 pt-12 '>
            <p className='text-5xl font-bold leading-[1.25]'>Manual <br /> Inspection is <br /><span className='text-blue-500'>Slow & Error- <br />Prone</span></p>
            <p className='my-10 text-lg  text-gray-400'>AI visual inspection, powered by computer vision, revolutionises the inspection process in manufacturing, enhancing precision and cost-effectiveness, all the while maintaining product excellence.</p>
